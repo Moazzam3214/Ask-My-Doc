@@ -29,7 +29,6 @@ ask-my-doc/
 ├── .env                       # API keys and environment variables
 ├── .gitignore
 ├── experiments.ipynb          # Prototyping and experiments
-└── __pycache__/
 ```
 
 ---
