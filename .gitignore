@@ -2,6 +2,6 @@ __pycache__
 .history/
 .streamlit/
 venv/
-.env
 .dockerignore
 Dockerfile
+.env
