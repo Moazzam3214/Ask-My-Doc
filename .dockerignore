@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.ipynb_checkpoints/
+experiments.ipynb
+.DS_Store
+.env
+.git
+.gitignore
+README.md
+experiments.ipynb
+venv/

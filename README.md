@@ -28,6 +28,8 @@ ask-my-doc/
 ├── requirements.txt
 ├── .env                       # API keys and environment variables
 ├── .gitignore
+├── .dockerignore
+├── Dockerfile                 # Docker commands to build docker image
 ├── experiments.ipynb          # Prototyping and experiments
 ```
 
@@ -79,6 +81,34 @@ Open your browser and navigate to [http://localhost:8501](http://localhost:8501)
 * Upload a PDF, DOCX, or TXT document.
 * Wait for processing, then ask questions in the chat box.
 * Get concise, context-aware answers from the AI.
+
+---
+
+## 🐳 Running with Docker
+
+You can build and run this application using Docker. This is useful for deploying in a consistent environment without installing dependencies manually.
+
+### Build the Docker image
+
+```sh
+docker build -t ask-my-doc .
+```
+
+### Run the Docker container
+
+```sh
+docker run -p 8501:8501 ask-my-doc
+```
+
+Then open your browser and go to [http://localhost:8501](http://localhost:8501)
+
+**Note:**
+- The Docker image is not published on Docker Hub; you must build it locally as shown above.
+- Make sure to provide your `.env` file with the required API keys. You can mount it into the container using:
+  ```sh
+  docker run -p 8501:8501 --env-file .env ask-my-doc
+  ```
+- If you add or update dependencies, rebuild the image.
 
 ---
 
